@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
@@ -8,7 +8,7 @@
     <SaslDependencyRoot>$(InstallRoot)</SaslDependencyRoot>
     <SaslDependencyLibDir>$(InstallLibDir)</SaslDependencyLibDir>
     <SaslIntermediateLibDir>$(SolutionDir)$(Platform)\$(Configuration)</SaslIntermediateLibDir>
-    <Krb5Dir>C:\msvc\krb</Krb5Dir>
+    <Krb5Dir>KRB5_DIR</Krb5Dir>
   </PropertyGroup>
   <PropertyGroup>
     <IntDir>$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
@@ -20,7 +20,7 @@
       <AdditionalIncludeDirectories>include;..\include;..\lib;..\plugins;..\sasldb;..\common;$(SaslDependencyRoot)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(SaslIntermediateLibDir)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SaslIntermediateLibDir);KRB5_LIB_DIR;</AdditionalLibraryDirectories>
       <AdditionalDependencies>Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Lib>
