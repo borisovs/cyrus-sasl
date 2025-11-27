@@ -638,7 +638,7 @@ int _plug_decode(decode_context_t *text,
 {
     unsigned int tocopy;
     unsigned diff;
-    char *tmp;
+    char *tmp = NULL;
     unsigned tmplen;
     int ret;
     
